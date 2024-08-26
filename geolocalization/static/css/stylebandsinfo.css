@@ -1,0 +1,241 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #262626;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fde634;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dfc929;
+}
+header {
+  width: 100%;
+  height: 100px;
+  background-color: transparent;
+  border-bottom: 3px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  width: 90px;
+  height: 90px;
+  margin-left: -690px;
+}
+.logo-name img {
+  height: 60px;
+  width: 500px;
+}
+.hero {
+  min-height: 110vh;
+  background-image: url(/static/img/landing-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.hero .title span {
+  font-size: 38px;
+}
+.title p {
+  margin-top: 28px;
+  margin-left: 18px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.title {
+  display: flex;
+}
+@media (max-width: 390px) {
+  .hero span {
+    font-size: 16px;
+  }
+  .title p {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-left: 14px;
+  }
+  .logo img {
+    display: none;
+  }
+  .logo-name img {
+    height: 40px;
+    width: 300px;
+  }
+}
+/* bands info section  */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+}
+/* the main img pic */
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 390px;
+  width: 300px;
+  box-shadow: 10px 10px 0 #000;
+  border: 5px solid black;
+  background-color: #fff;
+  transition: all 1.2s ease-in-out;
+}
+.img-container:hover {
+  box-shadow: 10px 10px #fde634;
+  transform: scale(1.02);
+}
+.img-holder {
+  width: 280px;
+  height: 280px;
+  transition: all 1.5s ease-in-out;
+}
+.img-holder:hover {
+  filter: grayscale(100%);
+}
+.img-container p {
+  margin-top: -10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+/* cards info */
+.brutalist-card {
+  width: 320px;
+  border: 4px solid #000;
+  background-color: #fff;
+  padding: 1.5rem;
+  box-shadow: 10px 10px #000;
+  transition: all 1.2s ease-in-out;
+}
+.brutalist-card:hover {
+  box-shadow: 10px 10px 0 #fde634;
+  transform: scale(1.02);
+}
+.brutalist-card__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #000;
+  padding-bottom: 1rem;
+}
+.brutalist-card__alert {
+  font-weight: 900;
+  color: #000;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.brutalist-card__message {
+  margin-top: 1rem;
+  color: #000;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  border-bottom: 2px solid #000;
+  padding-bottom: 1rem;
+  font-weight: 600;
+}
+/* expolor more  */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+.btn {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 3px solid black;
+  padding: 15px;
+  text-transform: uppercase;
+  box-shadow: 8px 8px #000;
+  transition: all 1.1s ease-in-out;
+}
+.btn:hover {
+  background-color: black;
+  box-shadow: 10px 10px #fde634;
+  color: white;
+}
+
+/*  footer */
+footer {
+  height: 240px;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+}
+footer .first-bar {
+  display: flex;
+  padding: 10px;
+}
+footer .first-bar img {
+  cursor: pointer;
+  height: 40px;
+}
+footer .first-bar p {
+  font-size: 12px;
+  margin-left: 20px;
+}
+footer .sec-bar {
+  /* margin-top: -10px; */
+  background-color: #fde634;
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .sec-bar .first-img {
+  height: 40px;
+}
+footer .sec-bar .sec-img {
+  height: 100px;
+}
+footer .rights {
+  text-align: center;
+}
+
+.location {
+  /* Center the content within the div */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Add some margin around the div */
+  margin: 20px;
+  
+  /* Add padding to the inner content */
+  padding: 10px;
+  
+  /* Optional: Add a border and some shadow for a nicer look */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+  /* Optional: Set a max-width to prevent the div from becoming too wide */
+  max-width: 800px;
+}
+
+.location img {
+  /* Ensure the image fits within the div */
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px; /* Optional: Rounded corners for the image */
+}

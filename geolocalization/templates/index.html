@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Groupie-tracker</title>
+</head>
+<body>
+    <header>
+        <a class="logo" href="/"><img src="static/img/image.svg" alt=""></a>
+        <a class="logo-name" href="/"><img src="static/img/name.png" alt=""></a>
+            <a class="about_btn" href="/about">ABOUT US</a>
+    </header>
+    <div class="landing">
+        <div class="content">
+            <img src="static/img/image.svg" alt="">
+            <div class="text">THIS IS WERE YOU CAN FIND ALL WHAT YOU NEED TO KNOW ABOUT YOUR FAVORITE BAND, LOCATION, CONCERT, ALBUMS AND MORE ...</div>
+        </div>
+        <div class="main__action" data-aos="zoom-in-down">
+          <a class="main__scroll" href="#bands-section">
+            <div class="main__scroll-box">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M11.9997 13.1716L7.04996     8.22186L5.63574 9.63607L11.9997 16L18.3637 9.63607L16.9495 8.22186L11.9997 13.1716Z" fill="rgba(28,28,30,1)">
+                </path>
+            </svg>
+            </div>
+        
+            <span class="main__scroll-text">Scroll down</span>
+          </a>
+        </div>
+    </div>
+
+    <!-- *-*** bands section ***** -->
+    <div id ="bands-section" class="bands-section">
+        <div class="container">
+            {{ range .Cards }}
+            <div class="card" data-aos="zoom-in-down">
+                <h3>{{.Name}}</h3>
+                <img src="{{.Image}}" alt="{{.Name}}">
+                <div>
+                    <a href="/bandsinfo?=id{{.Id}}" class="btn">SEE INFO</a>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+
+    <!-- **** footer section ******  -->
+    <footer class="footer">
+      <div class="first-bar">
+          <img src="static/img/icon-01.png" alt="">
+          <p>Made With Love By Students Of Zone01 Oujda</p>
+      </div>
+      <div class="sec-bar">
+          <img class="first-img" src="static/img/name.png" alt="groupie-tracker">
+          <img class="sec-img" src="static/img/image.svg" alt="groupie-tracker">
+      </div>
+     <p class="rights">&copy; 2024 Your Website. All rights reserved.</p>
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/stylebandsinfo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+    <title>bandsinfo</title>
+</head>
+
+<body>
+    <header>
+        <a class="logo" href="/"><img src="/static/img/image.png" alt=""></a>
+        <a class="logo-name" href="/"><img src="/static/img/name.png" alt=""></a>
+    </header>
+    <div class="hero">
+        <div class="title">
+            <span>__________</span>
+            <p>Band info section:</p>
+        </div>
+        <div class="container">
+            <div class="img-container">
+                <img src="{{.Card.Image}}" alt="{{.Card.Name}}" class="img-holder">
+                <h3>{{.Card.Name}}</h3>
+                <p>Creation Date : {{.Card.CreationDate}}</p>
+            </div>
+
+            <div class="text-border">
+                <div class="text-info">
+                    <div class="brutalist-card">
+                        <div class="brutalist-card__header">
+                            <div class="brutalist-card__alert">FirstAlbum</div>
+                        </div>
+                        <div class="brutalist-card__message">
+                            <li>{{ .Card.FirstAlbum }}</li>      
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- first card -->
+            <div class="text-border">
+                <div class="text-info">
+                    <div class="brutalist-card">
+                        <div class="brutalist-card__header">
+                            <div class="brutalist-card__alert">Members</div>
+                        </div>
+                        <div class="brutalist-card__message">
+                            {{ range .Card.Members }}
+                            <li>{{ . }}</li>
+                            {{ end }}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- second card -->
+            <div class="text-border">
+                <div class="text-info">
+                    <div class="brutalist-card">
+                        <div class="brutalist-card__header">
+                            <div class="brutalist-card__alert">Locations</div>
+                        </div>
+                        <div class="brutalist-card__message">
+                            {{ range .Card.Locations }}
+                            <li>{{ . }}</li>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- third card -->
+            <div class="text-border">
+                <div class="text-info">
+                    <div class="brutalist-card">
+                        <div class="brutalist-card__header">
+                            <div class="brutalist-card__alert">Concert Dates</div>
+                        </div>
+                        <div class="brutalist-card__message">
+                            {{ range .Card.ConcertDates }}
+                            <li>{{ . }}</li>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-border">
+                <div class="text-info">
+                    <div class="brutalist-card">
+                        <div class="brutalist-card__header">
+                            <div class="brutalist-card__alert">Relation</div>
+                        </div>
+                        <div class="brutalist-card__message">
+                            {{ range $key, $value := .Card.Relation }}
+                            <li>{{ $key }}: {{ $value }}</li>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-border">
+                <div class="text-info">
+                    <div class="brutalist-card">
+                        <div class="brutalist-card__header">
+                            <div class="brutalist-card__alert">Relation</div>
+                        </div>
+                        <div class="brutalist-card__message">
+                            {{ range $key, $value := .Card.Relation }}
+                            <li>{{ $key }}: {{ $value }}</li>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="location">
+            <img src="{{.MapURL}}" alt="Map of Casablanca">
+        </div>
+
+        <!-- sec cotainer -->
+
+
+
+    </div>
+    <div class="btn-container">
+        <a class="btn" href="/">Expolore more artists</a>
+    </div>
+    </div>
+    </div>
+    <!--  the band secition -->
+
+    <!-- ***** the footer *** -->
+    <footer class="footer">
+        <div class="first-bar">
+            <a href="https://zone01oujda.ma/" target="_blank"><img src="/static/img/icon-01.png" alt=""></a>
+            <p>Made With Love By Student Of Zone01 Oujda</p>
+        </div>
+        <div class="sec-bar">
+            <img class="first-img" src="/static/img/name.png" alt="groupie-tracker">
+            <img class="sec-img" src="/static/img/image.svg" alt="groupie-tracker">
+        </div>
+        <p class="rights">&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
